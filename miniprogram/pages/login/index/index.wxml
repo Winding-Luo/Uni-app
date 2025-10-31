@@ -1,0 +1,36 @@
+<view class="container">
+  <view class="title">智慧校园</view>
+  
+  <view class="input-item">
+    <text class="input-label">账号</text>
+    <input 
+      class="input" 
+      placeholder="请输入用户名 (admin)" 
+      bindinput="onUsernameInput" 
+      value="{{ username }}"
+    />
+  </view>
+  
+  <view class="input-item">
+    <text class="input-label">密码</text>
+    <input 
+      class="input" 
+      placeholder="请输入密码 (admin123)" 
+      password="true"
+      bindinput="onPasswordInput"
+      value="{{ password }}"
+    />
+  </view>
+  
+  <button 
+    class="login-btn" 
+    type="primary" 
+    bindtap="onLogin"
+    loading="{{ loading }}">
+    登 录
+  </button>
+  
+  <view class="test-link" bindtap="goToHome">
+    (跳过登录，先看校园圈子)
+  </view>
+</view>

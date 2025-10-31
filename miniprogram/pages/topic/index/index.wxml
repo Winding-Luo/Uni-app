@@ -1,0 +1,36 @@
+<view class="container">
+  <view class="search-bar">
+    <input class="search-input" placeholder="搜索帖子、用户..." />
+  </view>
+
+  <scroll-view class="topic-list" scroll-y="true" lower-threshold="100" bindscrolltolower="loadMoreTopics">
+    <view class="topic-item" wx:for="{{ topicList }}" wx:key="topicId">
+      
+      <view class="user-info">
+        <image class="avatar" src="{{ item.userAvatar || '/static/images/default-avatar.png' }}" />
+        <view class="user-details">
+          <view class="username">{{ item.createBy || '匿名用户' }}</view>
+          <view class="create-time">{{ item.createTime }}</view>
+        </view>
+      </view>
+
+      <view class="topic-content">
+        <view class="topic-title">{{ item.title }}</view>
+        <view class="topic-text">{{ item.content }}</view>
+      </view>
+      
+      <view class="topic-footer">
+        <view class="topic-category">{{ item.categoryName || '日常' }}</view>
+        <view class="stats">
+          <text>浏览 {{ item.views || 0 }}</text>
+          <text>点赞 {{ item.likes || 0 }}</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="loading-tip" wx:if="{{ loading }}">正在加载中...</view>
+    <view class="loading-tip" wx:if="{{ !hasMoreData }}">--- 没有更多了 ---</view>
+  </scroll-view>
+
+  <view class="publish-btn">+</view>
+</view>

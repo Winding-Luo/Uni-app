@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/login/index/index",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/topic/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "智慧校园",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#2468f2",
+    "list": [
+      {
+        "pagePath": "pages/topic/index/index",
+        "text": "校园圈子"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页(测试)"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
