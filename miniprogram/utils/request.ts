@@ -1,7 +1,7 @@
 // miniprogram/utils/request.ts
 
 // 您的本地后端地址
-const baseUrl = 'http://192.168.228.1:8080'
+const baseUrl = 'http://10.144.84.111:8080'
 
 export const request = (options: WechatMiniprogram.RequestOption) => {
   return new Promise((resolve, reject) => {
